@@ -1,0 +1,141 @@
+:root{
+    --all:'Inter', sans-serif;
+    --main-p:'Lexend Deca', sans-serif;
+    --main-color:hsl(0, 0%, 100%);
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: var(--all);
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+    color: var(--main-color);
+}
+
+.section{
+    display: flex;
+    width: 60em;
+    height: 24.5em;
+    margin: 10em auto;
+    overflow: hidden;
+    border-radius: 0.5em;
+    background-color: hsl(244, 38%, 16%);
+}
+
+.article,
+.picture-container{
+    flex-basis: 50%;
+    height: 100%;
+}
+
+
+.article{
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+}
+
+.main-title{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.violet{
+    color: hsl(277, 64%, 61%);
+}
+
+.subtitle{
+    width: 100%;
+    font-family: var(--main-p);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 2em;
+}
+
+.data-division{
+    display: flex;
+    flex-basis: 70%;
+}
+
+.data-item{
+    margin-right: 3em;
+    height: 120px;
+}
+
+.num{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: -10px;
+}
+
+.word{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.picture-container{
+    position: relative;
+}
+
+.img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.transparent-violet{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: hsl(277 64% 61% / 0.6);
+}
+
+@media screen and (max-width:425px){
+    .section{
+        width: 90%;
+        height: initial;
+        flex-direction: column;
+    }
+    
+    .article{
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+    }
+
+    .article,
+    .picture-container{
+    flex-basis: initial;
+    }
+
+    .main-title{
+        font-size: 1.5rem;
+    }
+
+    .main-title,
+    .subtitle{
+        text-align: center;
+    }
+
+    .data-division{
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .data-item{
+        margin: initial;
+        height: initial;
+    }
+}
